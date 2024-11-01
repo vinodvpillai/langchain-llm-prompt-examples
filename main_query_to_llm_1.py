@@ -21,4 +21,4 @@ if __name__ == "__main__":
     
     # Step 1: Query to LLM
     
-    print(get_completion("What is 1+1?"))
+    print(get_completion("What is 10+10?"))

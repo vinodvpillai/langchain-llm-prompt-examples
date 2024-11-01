@@ -23,7 +23,7 @@ def get_completion(prompt):
 if __name__ == "__main__":
     
     # Simple prompt using Direct F-String:
-    style = "American English in a calm and respectful tone"
+    style = "Hindi in a calm and respectful tone"
     customer_msg = "Hello how are you? I am too much tired working in such an environment unable to grow as per the expectation"
     
     prompt = f"""Translate the text that is delimited by triple backticks into a style that is {style}. text: ```{customer_msg}```"""

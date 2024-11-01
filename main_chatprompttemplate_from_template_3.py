@@ -24,7 +24,7 @@ def get_completion(prompt):
 if __name__ == "__main__":
     
     # Prompt using ChatPromptTemplate - from_template:
-    customer_style = "American English in a calm and respectful tone"
+    customer_style = "Hindi in a calm and respectful tone"
     customer_msg = "Hello how are you? I am too much tired working in such an environment unable to grow as per the expectation"
     
     template_string = """Translate the text that is delimited by triple backticks into a style that is {style}. text: ```{text}```"""
