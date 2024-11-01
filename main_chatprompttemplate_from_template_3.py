@@ -1,19 +1,16 @@
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import StrOutputParser
 from langchain_openai import ChatOpenAI
 
 import os
 from os.path import join, dirname
 from dotenv import load_dotenv
 
-
-
 # Loading the environment variables
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
 # LLM
-llm = ChatOpenAI(temperature=0, model=os.environ.get('OPENAI_MODEL'), api_key=os.environ.get('OPENAI_API_KEY'), base_url=os.environ.get('OPENAI_API_HOST'))  # type: ignore
+llm = ChatOpenAI(temperature=0, model=os.environ.get('OPENAI_MODEL'), api_key=os.environ.get('OPENAI_API_KEY'))  # type: ignore
 
 # Completion Method 
 """
@@ -35,9 +32,9 @@ if __name__ == "__main__":
     # Using the LangChain Prompt 
     chat_prompt = ChatPromptTemplate.from_template(template_string)
     print(chat_prompt.messages[0].prompt) # type: ignore
-    print("=====================")
+
     text = "Hello how are you? I am too much tired working in such an environment unable to grow as per the expectation"
     customer_message = chat_prompt.format_messages(style=customer_style, text=customer_msg)
     print(customer_message) # type: ignore
-    print("=====================")
+    
     print(get_completion(customer_message))
