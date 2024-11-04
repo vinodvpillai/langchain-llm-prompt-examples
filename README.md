@@ -27,7 +27,7 @@ This project demonstrates how to structure and manage queries for an LLM, using 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/langchain-llm-prompt-examples.git
+   git clone https://github.com/vinodvpillai/langchain-llm-prompt-examples.git
    cd langchain-llm-prompt-examples
    ```
 
